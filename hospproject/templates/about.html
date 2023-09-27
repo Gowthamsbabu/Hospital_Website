@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  About
+
+{% endblock %}
+
+
+{% block content %}
+<div class="header-bar">
+  <h1 class="text-center">About Page</h1>
+  <hr>
+</div>
+<section id="about-us">
+  <div id="mission-vision">
+      <h2>Our Mission</h2>
+      <p>To provide compassionate, high-quality healthcare to our community and beyond.</p>
+
+      <h2>Our Vision</h2>
+      <p>To be a leading healthcare institution known for innovation, excellence, and patient-centered care.</p>
+  </div>
+
+  <div id="history">
+      <h2>Our History</h2>
+      <p>Founded in 1960, Our Hospital has been serving the healthcare needs of our community for over six decades. We started as a small clinic and have since grown into a leading healthcare facility with state-of-the-art technology and a dedicated team of professionals.</p>
+  </div>
+
+  <div id="leadership">
+      <h2>Leadership Team</h2>
+      <p>Our hospital is led by a team of experienced professionals who are passionate about healthcare:</p>
+      <ul>
+          <li>Dr. Jane Smith - CEO</li>
+          <li>Dr. John Doe - Medical Director</li>
+          <li>Andrea Johnson - Chief Nursing Officer</li>
+      </ul>
+  </div>
+
+  <div id="quality-care">
+      <h2>Quality of Care</h2>
+      <p>Our commitment to quality care is reflected in our Joint Commission accreditation. We continuously invest in the latest medical technology and training for our staff to ensure the highest standards of patient care.</p>
+  </div>
+
+  <!-- Other sections, such as medical staff, facilities, patient testimonials, community involvement, etc., can be added as needed -->
+
+  <div id="contact">
+      <h2><a href="{% url 'contact' %}" >Contact Us</a></h2>
+      <p>If you have any questions or would like to schedule an appointment, please don't hesitate to get in touch:</p>
+      <address>
+          <p>City Hospital</p>
+          <p>123 Main Street</p>
+          <p>City, State ZIP</p>
+          <p>Phone: 0123456789</p>
+          <p>Email: info@cityhospital.com</p>
+      </address>
+  </div>
+</section>
+
+
+{% endblock %}

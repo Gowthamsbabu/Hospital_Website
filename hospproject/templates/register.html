@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Register
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container " >
+<div class="header-bar">
+    <h1>Register</h1>
+
+</div>
+
+<div class="card-body">
+  <form method="post">
+    {% csrf_token %}
+    {% if error %}
+      <p>Error: Please fill out all fields.</p>
+    {% endif %}
+    <label for="id_username">Username:</label><br>
+    {{ form.patient_name }}
+    <br>
+    <label for="id_password">Password:</label><br>
+    {{ form.password }}
+    <br>
+    <label for="id_password1">Confirm Password:</label><br>
+    {{ form.password1 }}<br>
+    <br>
+    <input class="button" type="submit" value="Register">
+  </form>
+  
+  
+    
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    
+</div>
+</div>
+
+
+
+
+{% endblock content %}
